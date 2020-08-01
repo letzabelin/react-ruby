@@ -1,6 +1,7 @@
 init:
-	bundle exec rails db:create
+	yarn install --check-files
 	bundle exec rails db:migrate
+
 start:
 	rails s
 
