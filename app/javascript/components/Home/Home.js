@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from './Jumbotron';
+import Table from './Table/Table';
+
 
 class Home extends Component {
   state = {
@@ -15,6 +17,7 @@ class Home extends Component {
     return (
       <>
         <Jumbotron />
+        <Table />
       </>
     );
   }
