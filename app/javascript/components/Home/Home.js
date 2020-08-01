@@ -13,11 +13,26 @@ class Home extends Component {
     ],
   };
 
+  handleVideoChange = (item) => (evt) => {
+    evt.preventDefault();
+
+    const course_modules = [...this.state.course_modules];
+    course_modules.map((module) => {
+      module.active = false;
+    });
+
+    item.active = !item.active;
+
+    course_modules[item.id - 1] = item;
+
+    this.setState({ course_modules })
+  }
+
   render() {
     return (
       <>
         <Jumbotron />
-        <Table course_modules={this.state.course_modules} />
+        <Table handleVideoChange={this.handleVideoChange} course_modules={this.state.course_modules} />
       </>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
+import ActiveItem from './ActiveItem';
 
 class Table extends Component {
   constructor(props) {
@@ -7,7 +8,12 @@ class Table extends Component {
   }
   render() {
     const items = this.props.course_modules.map((module) => {
-      return <Item key={module.id} title={module.title} description={module.description} />
+      return (
+        module.active ?
+        <ActiveItem handleVideoChange={this.props.handleVideoChange(module)} key={module.id} title={module.title} description={module.description} /> :
+        <Item handleVideoChange={this.props.handleVideoChange(module)} key={module.id} title={module.title} description={module.description} /> 
+      );
+
     })
     return (
       <div className="pt-5 pb-5">
@@ -16,8 +22,8 @@ class Table extends Component {
             <h2 className="pt-4 pb-4">React For Rails Developers - Videos</h2>
           </div>
       { items.length > 0 && items }
-        </div>
-      </div>
+    </div>
+  </div>
     );
   }
 }

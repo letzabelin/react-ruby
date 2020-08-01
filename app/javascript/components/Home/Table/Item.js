@@ -17,7 +17,7 @@ const Button = styled.a`
     -6px 6px 0px 3px #473228;
 `;
 
-const Item = ({ title, description }) => {
+const Item = ({ title, description, handleVideoChange }) => {
   return (
     <div className="row pt-4 pb-4">
       <div className="col-md-10 offset-md-1">
@@ -32,7 +32,7 @@ const Item = ({ title, description }) => {
                   <div className="h4">{title}</div>
                   <p>{description}</p>
                   <div className="cta-wrapper">
-                    <Button className="cta-btn">Watch This Video</Button>
+                    <Button onClick={handleVideoChange} className="cta-btn">Watch This Video</Button>
                   </div>
                 </div>
               </div>
