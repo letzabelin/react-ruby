@@ -25,7 +25,7 @@ export default () => {
     new_course_modules[item.id - 1] = item;
 
     setCourseModules(new_course_modules);
-  }
+  };
 
   useEffect(() => {
     fetchData();
