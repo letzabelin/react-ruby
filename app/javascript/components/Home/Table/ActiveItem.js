@@ -1,6 +1,7 @@
 import React from 'react';
-import Video from './Video';
 import styled from 'styled-components';
+
+import Video from './Video';
 
 const Button = styled.a`
   display: inline-block;

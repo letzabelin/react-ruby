@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Jumbotron from './Jumbotron';
-import Table from './Table/Table';
 import axios from 'axios';
+
+import Table from './Table/Table';
+import Jumbotron from './Jumbotron';
 
 export default () => {
   const [course_modules, setCourseModules] = useState([]);

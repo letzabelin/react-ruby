@@ -1,6 +1,7 @@
 import React from 'react';
-import Thumbnail from './Thumbnail';
 import styled from 'styled-components';
+
+import Thumbnail from './Thumbnail';
 
 const Button = styled.a`
   display: inline-block;
